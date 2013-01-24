@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+	    
+    <RelativeLayout
+    	 android:id="@+id/subHeader"
+    	 android:layout_width="match_parent"
+    	 android:layout_height="35dp"
+    	 android:background="#01B0F0"
+    	 android:layout_below="@+id/wrapper"
+    	 android:gravity="center_horizontal" >
+     	    
+     	 <TextView
+      	    android:id="@+id/textHeader"
+      	    android:layout_width="match_parent"
+      	    android:layout_height="match_parent"
+      	    android:text="@string/accueil_bar"
+      	    android:textColor="#FFFFFF"
+      	    android:textSize="18sp"
+      	    android:gravity="center" />
+     	    
+     	<ProgressBar 
+      	    android:id="@+id/loading"
+      	    android:layout_width="wrap_content"
+      	    android:layout_height="wrap_content"
+      	    android:layout_alignRight="@+id/textHeader"
+      	    android:visibility="visible"/>
+     	    
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#01B0F0"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/buttonRafraichir"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:background="@drawable/list_selector"
+            android:gravity="center"
+            android:text="@string/buttonRafraichir"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/subHeader"
+        android:text="@string/listMessage" >
+
+    </ListView>
+    
+</RelativeLayout>
